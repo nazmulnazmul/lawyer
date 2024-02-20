@@ -25,4 +25,19 @@ header {
   border: 1px solid red;
 }
 
+nav {
+  display: block;
+}
+nav ul {
+  padding-bottom: 20px;
+  margin: 0;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
 /*# sourceMappingURL=app.css.map */
