@@ -1,0 +1,13 @@
+@import "./vendors/reset";
+@import "./vendors/variables";
+
+@import "./layouts/headers";
+@import "./layouts/footer";
+@import "./layouts/navbar";
+
+@import "./components/heading";
+@import "./components/button";
+
+@import "./views/home";
+@import "./views/about";
+@import "./views/contact";
