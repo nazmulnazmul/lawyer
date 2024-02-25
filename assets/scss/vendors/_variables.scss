@@ -1,3 +1,8 @@
 :root{
-    border: 1px solid red($color: #000000);
+    --border: 1px solid red;
+    --border_light:#0f6e8c;
+    --border_deep:#05546d;
+    --black_light:#4f4f4f;
+    --black_deep:#2d2f30;
+    --white:#fff;
 }

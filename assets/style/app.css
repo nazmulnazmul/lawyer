@@ -7,8 +7,20 @@ html {
 }
 
 img,
+label,
 a, i, span {
   display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 img {
@@ -17,8 +29,55 @@ img {
   object-position: left;
 }
 
+h1, h2, h3,
+h4, h5, h6 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+p.p2 {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+header,
+nav,
+div,
+section,
+aside,
+main,
+footer {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 90px;
+  line-height: 100px;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 58px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
 :root {
-  border: 1px solid 0;
+  --border: 1px solid red;
+  --border_light:#0f6e8c;
+  --border_deep:#05546d;
+  --black_light:#4f4f4f;
+  --black_deep:#2d2f30;
+  --white:#fff;
 }
 
 header {
@@ -30,7 +89,8 @@ nav {
 }
 nav ul {
   padding-bottom: 20px;
-  margin: 0;
+  padding: 0;
+  display: flex;
 }
 nav ul li {
   list-style: none;
