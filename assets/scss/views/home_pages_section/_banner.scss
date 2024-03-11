@@ -1,0 +1,74 @@
+#banner{
+    
+    .banner_content{
+        padding: 130px 0px 70px;
+        background-color: rgba(250, 3, 3, 0.842)(175, 26, 26);
+        display: grid;
+        grid-template-columns: 755px 1fr;
+        .banner_details{
+            .banner_top{
+                h1{
+                    font-size: 70px;
+                    line-height: 100px;
+                    color: var(--brand_deep);
+                }
+
+                p{
+                    font-size: 24px;
+                    line-height: 38px;
+                    letter-spacing: 0.5px;
+                    max-width: 500px;
+                    margin-top: 40px;
+                }
+
+                a{
+                    background-color: var(--brand_deep);
+                    padding: 20px 40px;
+                    color: white;
+                    font-size: 17px;
+                    border-radius: 6px;
+                    margin-top: 20px;
+                    // margin-bottom: 20px;
+                }
+            }
+
+            .banner_buttom{
+                margin-top: 80px;
+                p{
+                    font-style: 22px;
+                    color: gray;
+                    line-height: 32px;
+                    
+                }
+                
+                .sponsor_list{
+                    margin-top: 40px;
+                    display: grid;
+                    grid-template-columns: 105px 105px;
+                    gap: 27px;
+                        a{
+                            img{
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    
+                }
+            }
+        }
+
+        .banner_image{
+            position: relative;
+            // background-color: 1px solid red;
+            .body_image{
+                width: 1000px;
+                position: absolute;
+                left: -620px;
+                top: -105px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

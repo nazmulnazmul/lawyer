@@ -1,12 +1,27 @@
-@import "./vendors/reset";
-@import "./vendors/variables";
+/*
+    Project: lawyer
+    User: Md. Nazmul Haque
+    Github: https://github.com/nazmulnazmul
+    Date: 25 02 2024 
+    Time: 17:44:44 
+    Path: assets\scss\app.scss
+    Task List: custom scripts, cart management
+*/
+ 
+ 
 
-@import "./layouts/headers";
-@import "./layouts/footer";
-@import "./layouts/navbar";
+@import "./vendors/fonts";
+@import "./vendors/variables";
+@import "./mixins/media";
+@import "./vendors/reset";
 
 @import "./components/heading";
 @import "./components/button";
+
+@import "./layouts/container";
+@import "./layouts/headers";
+@import "./layouts/footer";
+@import "./layouts/navbar";
 
 @import "./views/home";
 @import "./views/about";

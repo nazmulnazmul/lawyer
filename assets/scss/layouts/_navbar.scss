@@ -1,0 +1,91 @@
+/*
+    Project: lawyer
+    User: Md. Nazmul Haque
+    Github: https://github.com/nazmulnazmul
+    Date: 25 02 2024 
+    Time: 15:52:12 
+    Path: assets\scss\layouts\_navbar.scss
+    Task List: custom scripts, cart management
+*/
+ 
+ 
+
+
+nav{
+    display: block;
+    // border: var(--border);
+    ul{
+        // padding-bottom: 0;
+        // padding: 0;
+        // display: flex;
+        // gap: 50px;
+
+            padding-bottom: 0;
+            padding: 0;
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+           
+        li{
+            list-style-type: none;
+
+            &.close_nav{
+                display: none;
+            }
+
+            &.close_nav{
+                text-align: right;
+                a{
+                    margin-right: 20px;
+                    font-size: 20px;
+                }
+            }
+            a{
+                color: var(--black_deep);
+                text-transform: uppercase;
+                font-weight: 400;
+
+                &.active,
+                &:hover{
+                    font-family: var( --poppin_bold);
+                    // font-weight: 800;
+                }
+            }
+        }
+    }
+}
+
+@include custom_media(0px, 991.9px){
+    .nav{
+        position: relative;
+
+        ul{
+            display: none;
+            position: fixed;
+            background: #b1aeae14;
+            flex-direction: column;
+            gap: 15px;
+            width: 32vw;
+            min-width: 200px;
+            top: 0px;
+            text-align: center;
+            height: 100vh;
+            padding: 24px 0px;
+            right: 0px;
+            justify-content: flex-start;
+            text-align: left;
+            padding-left: 30px;
+            box-shadow: 0px 0px 10px #a3a3a36e;
+            backdrop-filter: blur(5px);
+            &.active{
+                display: block;
+            }
+            li{
+                a {
+                    
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,49 @@
+/*
+    Project: lawyer
+    User: Md. Nazmul Haque
+    Github: https://github.com/nazmulnazmul
+    Date: 25 02 2024 
+    Time: 17:44:44 
+    Path: assets\scss\app.scss
+    Task List: custom scripts, cart management
+*/
+@font-face {
+  font-family: "poppins-regular";
+  src: url("../fonts/poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "poppins-bold";
+  src: url("../fonts/poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "poppins-semibold";
+  src: url("../fonts/poppins/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "poppins-extrabold";
+  src: url("../fonts/poppins/Poppins-ExtraBold.ttf");
+}
+:root {
+  --border: 1px solid red;
+  --border_light:#0f6e8c;
+  --brand_deep:#05546d;
+  --black_light:#4f4f4f;
+  --black_deep:#2d2f30;
+  --white:#fff;
+  --app_fonts: "poppins-regular";
+  --poppin_regular: "poppins-regular";
+  --poppin_semibold: "poppins-semibold";
+  --poppin_bold: "poppins-bold";
+  --poppin_extrabold: "poppins-extrabold";
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  font-family: var(--app_fonts);
 }
 
 img,
@@ -14,6 +54,9 @@ a, i, span {
 
 a {
   text-decoration: none;
+  font-size: 12px;
+  line-height: 22px;
+  transition-duration: 0.3s;
 }
 
 ul,
@@ -57,7 +100,7 @@ footer {
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 80px;
   line-height: 100px;
 }
 
@@ -71,33 +114,225 @@ h3 {
   line-height: 32px;
 }
 
-:root {
-  --border: 1px solid red;
-  --border_light:#0f6e8c;
-  --border_deep:#05546d;
-  --black_light:#4f4f4f;
-  --black_deep:#2d2f30;
-  --white:#fff;
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-header {
-  border: 1px solid red;
+.container {
+  width: 1400px;
+  margin: auto;
+  padding: 15px;
+}
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .container {
+    width: calc(100% - 30px);
+  }
+}
+@media (min-width: 576px) and (max-width: 767.9px) {
+  .container {
+    width: 546px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.9px) {
+  .container {
+    width: 738px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.9px) {
+  .container {
+    width: 962px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399.9px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
 }
 
+header .header_body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0px;
+}
+header .header_body .logo img {
+  padding-top: 5px;
+}
+header .header_body .right_content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+header .header_body .right_content .nav {
+  flex: 1;
+  display: grid;
+  align-items: center;
+}
+header .header_body .right_content .extra_links {
+  display: flex;
+}
+header .header_body .right_content .extra_links .search a {
+  padding-top: 8px;
+}
+header .header_body .right_content .extra_links .nav_control {
+  display: none;
+  align-items: center;
+}
+header .header_body .right_content .extra_links .nav_control a {
+  line-height: 10px;
+}
+@media (min-width: 0px) and (max-width: 991.9px) {
+  header .header_body .right_content {
+    justify-content: flex-end;
+  }
+  header .header_body .right_content .nav {
+    order: 2;
+    flex: unset;
+  }
+  header .header_body .right_content .nav ul li.close_nav {
+    display: block;
+  }
+  header .header_body .right_content .extra_links {
+    order: 1;
+    gap: 10px;
+  }
+  header .header_body .right_content .extra_links .nav_control {
+    display: grid;
+  }
+}
+
+/*
+    Project: lawyer
+    User: Md. Nazmul Haque
+    Github: https://github.com/nazmulnazmul
+    Date: 25 02 2024 
+    Time: 15:52:12 
+    Path: assets\scss\layouts\_navbar.scss
+    Task List: custom scripts, cart management
+*/
 nav {
   display: block;
 }
 nav ul {
-  padding-bottom: 20px;
+  padding-bottom: 0;
   padding: 0;
   display: flex;
+  gap: 50px;
+  justify-content: center;
 }
 nav ul li {
-  list-style: none;
+  list-style-type: none;
+}
+nav ul li.close_nav {
+  display: none;
+}
+nav ul li.close_nav {
+  text-align: right;
+}
+nav ul li.close_nav a {
+  margin-right: 20px;
+  font-size: 20px;
 }
 nav ul li a {
-  text-decoration: none;
-  color: #000;
+  color: var(--black_deep);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+nav ul li a.active, nav ul li a:hover {
+  font-family: var(--poppin_bold);
+}
+
+@media (min-width: 0px) and (max-width: 991.9px) {
+  .nav {
+    position: relative;
+  }
+  .nav ul {
+    display: none;
+    position: fixed;
+    background: rgba(177, 174, 174, 0.0784313725);
+    flex-direction: column;
+    gap: 15px;
+    width: 32vw;
+    min-width: 200px;
+    top: 0px;
+    text-align: center;
+    height: 100vh;
+    padding: 24px 0px;
+    right: 0px;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 30px;
+    box-shadow: 0px 0px 10px rgba(163, 163, 163, 0.431372549);
+    backdrop-filter: blur(5px);
+  }
+  .nav ul.active {
+    display: block;
+  }
+  .nav ul li a {
+    font-size: 17px;
+  }
+}
+#banner .banner_content {
+  padding: 130px 0px 70px;
+  background-color: rgba(250, 3, 3, 0.842) 175, 26, 26;
+  display: grid;
+  grid-template-columns: 755px 1fr;
+}
+#banner .banner_content .banner_details .banner_top h1 {
+  font-size: 70px;
+  line-height: 100px;
+  color: var(--brand_deep);
+}
+#banner .banner_content .banner_details .banner_top p {
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.5px;
+  max-width: 500px;
+  margin-top: 40px;
+}
+#banner .banner_content .banner_details .banner_top a {
+  background-color: var(--brand_deep);
+  padding: 20px 40px;
+  color: white;
+  font-size: 17px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+#banner .banner_content .banner_details .banner_buttom {
+  margin-top: 80px;
+}
+#banner .banner_content .banner_details .banner_buttom p {
+  font-style: 22px;
+  color: gray;
+  line-height: 32px;
+}
+#banner .banner_content .banner_details .banner_buttom .sponsor_list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 105px 105px;
+  gap: 27px;
+}
+#banner .banner_content .banner_details .banner_buttom .sponsor_list a img {
+  width: 100%;
+  object-fit: cover;
+}
+#banner .banner_content .banner_image {
+  position: relative;
+}
+#banner .banner_content .banner_image .body_image {
+  width: 1000px;
+  position: absolute;
+  left: -620px;
+  top: -105px;
+}
+#banner .banner_content .banner_image .body_image img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */

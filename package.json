@@ -1,13 +1,21 @@
 {
   "name": "lawyer",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "npx sass assets/scss/app.scss assets/style/app.css -w"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazmulnazmul/lawyer.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/nazmulnazmul/lawyer/issues"
+  },
+  "homepage": "https://github.com/nazmulnazmul/lawyer#readme"
 }

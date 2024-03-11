@@ -4,7 +4,10 @@ html{
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    font-family: var(--app_fonts);
+    
 }
+
 img,
 label,
 a,i,span{
@@ -13,6 +16,9 @@ a,i,span{
 
 a{
     text-decoration: none;
+    font-size: 12px;
+    line-height: 22px;
+    transition-duration: .3s;
 }
 ul,
 ol{
@@ -54,7 +60,7 @@ footer{
 }
 
 h1{
-    font-size: 90px;
+    font-size: 80px;
     line-height: 100px;
 }
 
@@ -65,4 +71,13 @@ h2{
 h3{
     font-size: 22px;
     line-height: 32px;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
